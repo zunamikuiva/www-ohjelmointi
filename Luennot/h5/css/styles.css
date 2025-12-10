@@ -1,0 +1,333 @@
+@charset "utf-8";
+
+body {
+	font: 100% Georgia, "Timews New Roman", Times, serif;
+	background: #1a1b52;
+	margin: 0;
+	padding: 0;
+	color: #fff;
+}
+
+#container {
+	width: 100%;
+	text-align: left;
+	font-size: 80%;
+}
+
+#header {
+	background: #fff url(../images/logo_background.gif) no-repeat right;
+	border-bottom: 1px solid #9290bf;
+}
+
+
+#header ul {
+	margin: 0;
+	padding: 0 0 0 28px;
+	list-style: none;
+	background-image: linear-gradient(#ffcc08, #ffad00);
+	float: left;
+	width: 100%;
+	border-bottom: 1px solid #575691;
+	box-sizing: border-box;
+}
+
+#header li {
+	font-size: 110%;
+	float: left;
+}
+
+#header li a {
+	float: left;
+	display: block;
+	padding: 8px 12px;
+	text-decoration: none;
+	font-weight: bold;
+	color: #fff;
+}
+
+.living #living a,
+.business #business a,
+.chamber #chamber a {
+	color: #1a1b52;
+	font-weight: bold;
+}
+
+a img {
+	border: 0;
+}
+
+#header img {
+	margin: 31px 0 31px 40px;
+}
+
+#mainWrap {
+	background-image: linear-gradient(#6e6ea4, #403d8a 258px);
+	padding-bottom: 20px;
+	border-bottom: 10px solid #36357d;
+}
+
+#sidebar1 {
+	float: left;
+	width: 23%;
+	padding: 15px 0;
+	background: url(../images/side1_back.jpg) no-repeat right top;
+	min-height: 200px;
+}
+
+#sidebar2 {
+	float: right;
+	width: 23%;
+	padding: 15px 0;
+	background: url(../images/side2_back.jpg) no-repeat right top;
+	min-height: 200px;
+}
+
+#sidebar1 ul {
+	font-size: 105%;
+	margin: 15px 35px 0 0;
+	padding: 0px;
+	list-style: none;
+}
+
+#sidebar1 li a {
+	color: #FFF;
+	text-decoration: none;
+	display: block;
+	padding: 5px 0px 5px 40px;
+}
+
+.visiting #visiting a,
+.moving #moving a,
+.maplocator #maplocator a,
+.directory #directory a {
+	background: url(../images/arrow.gif) no-repeat left center;
+	color: #FF9F00;
+}
+
+#sidebar2 p,
+#sidebar2 h3 {
+	margin-left: 10px;
+	margin-right: 30px;
+}
+
+#mainContent {
+	margin: 0 24% 0 23.5%;
+	padding-top: 10px;
+	padding-right: 100px;
+	background: url(../images/content_back.jpg) no-repeat right top;
+}
+
+#footer {
+	padding: 0 10px;
+	border-top: 10px solid #2D2D70;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	color: #5C5A99;
+	width: 59%;
+}
+
+#footer ul {
+	margin: 0px;
+	padding: 0px;
+	float: right;
+	width: 39%;
+	list-style: none;
+}
+
+#footer li {
+	float: right;
+}
+
+#footer li a {
+	display: block;
+	padding: 10px;
+	color: #5C5A99;
+	text-decoration: none;
+}
+
+#footer li a:hover,
+#footer li a:active,
+#footer li a:focus {
+	color: #FF9F00;
+}
+
+#footer p {
+	margin: 0;
+	padding: 10px 0;
+}
+
+.fltrt {
+	float: right;
+	margin-left: 8px;
+}
+
+.fltlft {
+	float: left;
+	margin-right: 8px;
+}
+
+.clearfloat {
+	clear: both;
+	height: 0;
+	font-size: 1px;
+	line-height: 0px;
+}
+
+p,
+#mainContent ul,
+#mainContent ol {
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 1.5;
+	color: #FFF;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	color: #FF9F00;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-weight: normal;
+}
+
+h1 {
+	font-size: 225%;
+}
+
+h2 {
+	font-size: 175%;
+}
+
+h3 {
+	font-size: 150%;
+}
+
+h4 {
+	font-size: 135%;
+}
+
+a {
+	color: #FFF;
+	text-decoration: underline;
+}
+
+a:hover,
+a:active,
+a:focus {
+	text-decoration: none;
+}
+
+/*
+   RESPONSIVE LAYOUT
+*/
+
+
+/* --- 1) MOBIILI: max 600px --- */
+@media (max-width: 600px) {
+
+	#header img {
+		margin: 10px auto;
+		display: block;
+		width: 120px;
+		height: auto;
+	}
+
+	#header ul {
+		float: none;
+		width: 100%;
+		text-align: center;
+	}
+
+	#header li {
+		float: none;
+		display: inline-block;
+		margin: 0;
+	}
+
+	#mainWrap {
+		background-image: none;
+		padding: 0;
+	}
+
+	#sidebar1,
+	#sidebar2,
+	#mainContent {
+		float: none;
+		width: 100%;
+		margin: 0;
+		padding: 15px;
+		background-size: cover;
+	}
+
+	#mainContent {
+		padding-right: 15px;
+	}
+
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+
+	#footer {
+		width: 100%;
+		text-align: center;
+	}
+
+	#footer ul {
+		float: none;
+		width: 100%;
+	}
+
+	#footer li {
+		float: none;
+		display: inline-block;
+	}
+}
+
+
+/* --- 2) TABLET: 600px – 900px --- */
+@media (min-width: 600px) and (max-width: 900px) {
+
+	#sidebar1,
+	#sidebar2 {
+		width: 30%;
+		float: left;
+		padding: 10px;
+	}
+
+	#sidebar2 {
+		float: right;
+	}
+
+	#mainContent {
+		margin: 0 0 0 0;
+		width: 100%;
+		padding: 20px;
+		background-size: cover;
+	}
+
+	#footer {
+		width: 100%;
+		text-align: center;
+	}
+
+	#footer ul {
+		width: 100%;
+		float: none;
+		margin-top: 10px;
+	}
+
+	#footer li {
+		float: none;
+		display: inline-block;
+	}
+}
+
+
+/* --- 3) DESKTOP: yli 900px --- */
+
+@media (min-width: 900px) {
+	#container {
+		max-width: 1400px;
+		margin: 0 auto;
+	}
+}

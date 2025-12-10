@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 Palstan taitto flexillä</title>
+    <style>
+        .body {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            border: 1px solid black;
+            box-sizing: border-box;
+            padding: 10px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main {
+            display: flex;
+        }
+
+        .sidebar-left,
+        .sidebar-right {
+            width: 25%;
+        }
+
+        .sidebar-left {
+            order: -1;
+        }
+
+        .mainContent {
+            width: 50%;
+            flex: 1 1 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Header</h1>
+        </div>
+
+        <div class="main">
+            <div class="mainConentn">
+                <h3>Maincontent</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, veniam, quaerat, velit deserunt facere
+                    quasi distinctio omnis praesentium ducimus autem doloribus enim incidunt nam excepturi. Cumque illum
+                    voluptas minima fuga tenetur perferendis, doloribus quibusdam quidem, architecto deleniti, esse
+                    nesciunt facere officiis et tempora consequuntur doloremque vel. Nobis pariatur, exercitationem
+                    maxime unde ducimus repellat! Nobis, nulla fugit quasi officiis natus repellendus nisi! Veniam
+                    molestiae eaque sequi quas modi adipisci quibusdam. Sunt sequi temporibus, vel accusamus alias ad
+                    odit et consequuntur ullam eius molestiae ipsam error similique quasi consectetur ducimus dolorum
+                    voluptatibus veniam illo! Rem, repudiandae nesciunt corrupti natus amet itaque, ipsam magni porro
+                    harum, ea officia at? Excepturi beatae sit, velit dolorum officiis debitis voluptatibus dolor. Magni
+                    fugiat tempore, illo commodi hic dolore aliquam asperiores. Architecto ratione sit dolorem assumenda
+                    consectetur asperiores laboriosam excepturi odio suscipit maxime nisi placeat officia laborum
+                    voluptas expedita rerum neque, fugiat recusandae eligendi facere autem totam.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur animi alias placeat eveniet
+                    incidunt laboriosam amet ipsam natus tempora molestias fugit repellendus praesentium perferendis
+                    asperiores voluptate eum omnis debitis, laborum a officia aperiam quas quisquam quidem in? Molestiae
+                    dicta, corrupti ipsam, facilis fugit necessitatibus aliquam quam voluptate soluta quos beatae?
+                </p>
+            </div>
+            <div class="sidebar-left">
+                <p>Sidebr left</p>
+            </div>
+            <div class="sidebar-right">
+                <p>Sidebar right</p>
+            </div>
+
+        </div>
+        <div class="footer">
+            <p>Footer</p>
+        </div>
+
+    </div>
+</body>
+
+</html>

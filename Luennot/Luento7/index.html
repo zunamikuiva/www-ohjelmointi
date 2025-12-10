@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RWD</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      padding: 0;
+      margin: 0;
+    }
+
+    div,
+    header,
+    main,
+    footer {
+      border: 1px solid black;
+      padding: 10px;
+    }
+
+    .container {
+      padding: 0;
+      width: 960px;
+      margin: 0 auto
+    }
+
+    header {
+      background-color: aquamarine;
+    }
+
+    .side1,
+    .side2 {
+      width: 25%;
+      float: left;
+      background-color: blueviolet;
+      color: white;
+    }
+
+    main {
+      width: 50%;
+      float: left;
+      background-color: white;
+    }
+
+    .clearfloat {
+      clear: both;
+    }
+
+    footer {
+      background-color: beige;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    @media screen and (max-width: 959px) {
+      .container {
+        width: 100%;
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+
+      .side1,
+      .side2,
+      main {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <header>
+      <h1>Header</h1>
+    </header>
+
+    <div class="side1">
+      <h3>Sidebar1</h3>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus minus vitae totam eius, sapiente ullam placeat
+        incidunt cum velit aliquid? Natus eveniet nulla quidem ab saepe accusamus quo aliquid numquam?
+      </p>
+    </div>
+
+    <main>
+      <h2>Maincontent</h2>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga sit obcaecati velit in nobis voluptatibus
+        similique nihil eius. Inventore, voluptatum aspernatur reiciendis nostrum laboriosam deserunt a tenetur placeat
+        consectetur aut.
+      </p>
+      <p>
+        <img src="images/cat_small.jpg" alt="">
+      </p>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est ducimus expedita unde ab sint et aut amet facere
+        laborum eligendi tempore aliquid quisquam enim, non, voluptas assumenda, deleniti earum quam?
+      </p>
+    </main>
+
+    <div class="side2">
+      <h3>Sidebar2</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, exercitationem, molestias laborum rem saepe maxime
+        deleniti perferendis optio dignissimos fugit velit! Repellendus alias amet voluptate ipsam, dignissimos
+        assumenda reiciendis debitis.
+      </p>
+    </div>
+    <br class="clearfloat">
+    <footer>
+      <p>Footer</p>
+    </footer>
+
+  </div>
+</body>
+
+</html>

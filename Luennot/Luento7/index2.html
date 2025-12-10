@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RWD</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        div,
+        header,
+        main,
+        footer {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        .container {
+            padding: 0;
+            width: 960px;
+            margin: 0 auto;
+        }
+
+        header {
+            background-color: aquamarine;
+        }
+
+        .side1,
+        .side2 {
+            width: 25%;
+            float: left;
+            background-color: blueviolet;
+            color: white;
+        }
+
+        main {
+            width: 50%;
+            float: left;
+            background-color: white;
+        }
+
+        .clearfloat {
+            clear: both;
+        }
+
+        footer {
+            background-color: beige;
+        }
+
+        @media screen and (max-width: 959px) {
+            .container {
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width: 767px) {
+
+            .side1,
+            .side2,
+            main {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Header</h1>
+        </header>
+
+
+        <div class="side1">
+            <h3>Sidebar1</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos nobis nisi dolor possimus dolorum?
+                Magni omnis, assumenda provident eos tenetur laudantium harum fugit, quod praesentium, voluptatibus
+                reprehenderit voluptates dolore vel.</p>
+        </div>
+
+
+        <main>
+            <h2>Maincontent</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos, vitae! Quisquam expedita tenetur minus ab
+                culpa non hic omnis, quod magnam perspiciatis recusandae eum blanditiis odit cupiditate natus quos
+                dolor?</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis porro beatae odit pariatur et illo
+                placeat aperiam quod impedit vero delectus, harum sint ipsam iusto, voluptates voluptatem incidunt.
+                Repudiandae, rem!</p>
+
+        </main>
+
+        <div class="side2">
+            <h3>Sidebar2</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis voluptatibus ipsam ab iste, dicta
+                officiis pariatur laudantium quae corporis architecto. Eaque, possimus. Exercitationem cum culpa
+                recusandae at itaque eos autem.</p>
+        </div>
+
+        <br class="clearfloat">
+        <footer>
+            <p>Footer</p>
+        </footer>
+    </div>
+
+</body>
+
+</html>

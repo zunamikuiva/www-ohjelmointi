@@ -1,0 +1,314 @@
+/* Components */
+
+.hamburger-menu {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    top: 5%;
+    right: 5%;
+    z-index: 50;
+
+    .menu {
+        @extend %fullSpace;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        cursor: pointer;
+        transition: transform 0.5s;
+
+        &-line {
+            width: 100%;
+            height: 3px;
+            background-color: $color-primary;
+            transform-origin: right;
+            transition: all 0.5s 0.5s;
+        }
+    }
+}
+
+.checkbox {
+    display: none;
+}
+
+.navbar-navigation-left {
+    left: -100vw;
+    transition: left 0.5s;
+}
+
+.navbar-navigation-right {
+    right: -100vw;
+    transition: right 0.5s;
+}
+
+
+.checkbox:checked~.navbar-navigation .navbar-navigation-left {
+    left: 0;
+}
+
+.checkbox:checked~.navbar-navigation .navbar-navigation-right {
+    right: 0;
+}
+
+.checkbox:checked~.hamburger-menu .menu {
+    transform: rotate(90deg);
+}
+
+.checkbox:checked~.hamburger-menu .menu-line-1 {
+    transform: rotate(-40deg);
+}
+
+.checkbox:checked~.hamburger-menu .menu-line-2 {
+    opacity: 0;
+}
+
+.checkbox:checked~.hamburger-menu .menu-line-3 {
+    transform: rotate(40deg);
+}
+
+
+.logo {
+    font-size: 70px;
+    color: $color-primary;
+    display: block;
+    width: 110px;
+    height: 110px;
+    text-decoration: none;
+    border: 4px solid $color-primary;
+    border-radius: 50%;
+    @include flexLayout;
+}
+
+.main-name {
+    font-family: $font-Marck;
+    font-size: 50px;
+    color: $color-secondary;
+    text-align: center;
+    @include textStyles(none);
+}
+
+.sub-name {
+    font-family: $font-Roboto;
+    font-size: 18px;
+    color: $color-secondary;
+    text-align: center;
+    @include textStyles;
+}
+
+.main-heading {
+    font-family: $font-Marck;
+    font-size: 100px;
+    font-weight: 300;
+    color: $color-primary;
+    margin-bottom: 40px;
+    text-align: center;
+
+    @media screen and (max-width: 768px) {
+        font-size: 60px;
+        margin-bottom: 20px;
+    }
+}
+
+.sub-heading {
+    font-family: $font-Roboto;
+    font-size: 60px;
+    font-weight: 300;
+    color: $color-secondary;
+    margin-bottom: 80px;
+    text-align: center;
+
+    @media screen and (max-width: 768px) {
+        font-size: 30px;
+        margin-bottom: 40px;
+    }
+}
+
+.main-btn {
+    width: 200px;
+    height: 45px;
+    font-family: $font-Roboto;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: $color-secondary;
+    background-color: transparent;
+    border: 1px solid $color-primary;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.5s;
+    display: block;
+    margin: 0 auto;
+
+    &:hover {
+        background-color: $color-primary;
+        color: $color-dark;
+    }
+}
+
+/* CARDS */
+
+.card {
+    width: 33.33333%;
+    height: 33.33333vw;
+    position: relative;
+    overflow: hidden;
+
+    &:hover .card-overlay {
+        left: 0;
+    }
+
+    &-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    &-overlay {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        background-color: rgba($color-primary, 0.6);
+        @extend %fullSpace;
+        color: $color-white;
+        @include flexLayout;
+        flex-direction: column;
+        z-index: 10;
+        transition: left 0.5s;
+    }
+
+    &-paragraph {
+        font-family: $font-Roboto;
+        font-size: 30px;
+        @include textStyles(capitalize);
+        margin: 30px;
+    }
+
+    &-btn {
+        width: 150px;
+        height: 40px;
+        color: $color-primary;
+        background-color: $color-white;
+        font-family: $font-Raleway;
+        font-size: 16px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border: 1px solid $color-primary;
+        border-radius: 20px;
+        outline: none;
+        cursor: pointer;
+    }
+
+    .card-img {
+        max-width: 100%;
+    }
+}
+
+/* ------------------------------------------------------ */
+/* RESPONSIVE */
+/* ------------------------------------------------------ */
+
+/* TABLET (max-width: 992px) */
+@media screen and (max-width: 992px) {
+
+    /* NAVIGATION */
+    .navbar-navigation-left,
+    .navbar-navigation-right {
+        width: 100vw;
+    }
+
+    .navbar-navigation-left .left-img {
+        width: 80px;
+    }
+
+    .nav-list-link {
+        font-size: 40px;
+        margin: 15px;
+    }
+
+    /* HEADER */
+    .main-heading {
+        font-size: 70px;
+    }
+
+    .sub-heading {
+        font-size: 40px;
+    }
+
+    /* ABOUT */
+    .about-us {
+        flex-direction: column;
+        height: auto;
+        padding: 40px 0;
+    }
+
+    .about-us-left,
+    .about-us-right {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .about-us-right {
+        padding: 0 40px;
+    }
+
+    /* GALLERY */
+    .card {
+        width: 50%;
+        height: 50vw;
+    }
+}
+
+/* PHONE (max-width: 600px) */
+@media screen and (max-width: 600px) {
+
+    /* NAV */
+    .hamburger-menu {
+        width: 30px;
+        height: 30px;
+    }
+
+    .nav-list-link {
+        font-size: 30px;
+        margin: 10px;
+    }
+
+    /* HEADER */
+    .main-heading {
+        font-size: 45px;
+    }
+
+    .sub-heading {
+        font-size: 25px;
+    }
+
+    .logo {
+        width: 80px;
+        height: 80px;
+        font-size: 40px;
+    }
+
+    /* ABOUT */
+    .about-us-right {
+        padding: 0 20px;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+
+    /* GALLERY – 1 column on phone */
+    .card {
+        width: 100%;
+        height: 70vw;
+    }
+
+    /* FOOTER */
+    .footer-header {
+        margin-bottom: 40px;
+    }
+
+    .social-media-link {
+        font-size: 35px;
+    }
+}

@@ -1,0 +1,64 @@
+<form action="index.html">
+    <table>
+        <tr>
+            <td><label for="enimi">Etunimi:</label></td>
+            <td><input type="text" name="etunimi" id="enimi" required></td>
+        </tr>
+        <tr>
+            <td><label for="snimi">Sukunimi:</label></td>
+            <td><input type="text" name="sukunimi" id="snimi" required></td>
+        </tr>
+        <tr>
+            <td><label for="email">Sähköpostiosoite:</label></td>
+            <td><input type="email" name="sposti" id="email"></td>
+        </tr>
+        <tr>
+            <td><label for="pwd">Salasana:</label></td>
+            <td><input type="password" name="salasana" id="pwd"></td>
+        </tr>
+        <tr>
+            <td><label for="saika">Syntymäaika:</label></td>
+            <td><input type="date" name="syntymaaika" id="saika"></td>
+        </tr>
+        <tr>
+            <td>Ruokailut:</td>
+            <td>
+                <input type="checkbox" name="aamu" id="aamu">
+                <label for="aamu">Aamupala</label><br>
+                <input type="checkbox" name="lounas" id="lounas">
+                <label for="lounas">Lounas</label><br>
+                <input type="checkbox" name="paiva" id="paiva">
+                <label for="paiva">Päivällinen</label>
+            </td>
+        </tr>
+        <tr>
+            <td>Sukupuoli:</td>
+            <td>
+                <input type="radio" name="spuoli" id="nainen">
+                <label for="nainen">Nainen</label><br>
+                <input type="radio" name="spuoli" id="mies">
+                <label for="mies">Mies</label><br>
+                <input type="radio" name="spuoli" id="muu">
+                <label for="muu">Muu</label>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="area">Erityistoiveet:</label></td>
+            <td><textarea name="toiveet" id="area" cols="30" rows="10"></textarea></td>
+        </tr>
+        <tr>
+            <td><label for="valinta">Valinta:</label></td>
+            <td>
+                <select name="valinta" id="valinta">
+                    <option value="valinta1">Valinta1</option>
+                    <option value="valinta2">Valinta2</option>
+                    <option value="valinta3">Valinta3</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Lähetä"></td>
+            <td></td>
+        </tr>
+    </table>
+</form>

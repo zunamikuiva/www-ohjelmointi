@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luento2</title>
+</head>
+
+
+
+
+
+<body>
+    <h1>Kuvat, taulukot ja lomakkeet</h1>
+
+    <table border="1" width="200" style="margin-bottom: 45px;">
+        <caption>Esimerkkitaulukko</caption>
+        <thead>
+            <tr> <!--table>tr*10>td*3-->
+                <th colspan="6">1 2 3 4 5 6</th>
+
+            </tr>
+        </thead>
+        <tr>
+            <tbody>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+                <td>11</td>
+                <td>12</td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td rowspan="2">14 <br> 20</td>
+            <td>15</td>
+            <td>16</td>
+            <td>17</td>
+            <td>18</td>
+        </tr>
+        <tr>
+            <td>19</td>
+            <td>21</td>
+            <td colspan="2" rowspan="2">22 23 <br>28 29</td>
+            <td>24</td>
+        </tr>
+        <tr>
+            <td>25</td>
+            <td>26</td>
+            <td>27</td>
+            <td>30</td>
+        </tr>
+        <tr>
+            <td>31</td>
+            <td>32</td>
+            <td>33</td>
+            <td>34</td>
+            <td>35</td>
+            <td>36</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <form action="index.html">
+        <label for="enimi">Etunimi:</label>
+        <input type="text" name="etunimi" id="enimi" required><br>
+        <label for="snimi">Sukunimi:</label>
+        <input type="text" name="sukunimi" id="snimi" required><br>
+        <label for="email">Sähköpostiosoite:</label>
+        <input type="email" name="sposti" id="email"><br>
+        <label for="pwd">Salasana:</label>
+        <input type="password" name="salasana" id="pwd"><br>
+        <label for="saika">Syntymäaika:</label>
+        <input type="date" name="syntymaaika" id="saika"><br>
+        <p>Ruokailut:</p>
+        <input type="checkbox" name="aamu" id="aamu">
+        <label for="aamu">Aamupala</label> <br>
+        <input type="checkbox" name="lounas" id="lounas">
+        <label for="aamu">Lounas</label><br>
+        <input type="checkbox" name="paiva" id="paiva">
+        <label for="aamu">Päivällinen</label><br>
+        <P>Sukupuoli:</P>
+        <input type="radio" name="spuoli" id="nainen">
+        <label for="nainen">Nainen</label><br>
+
+        <input type="radio" name="spuoli" id="mies">
+        <label for="mies">Mies</label><br>
+
+        <input type="radio" name="spuoli" id="muu">
+        <label for="muu">Muu</label><br>
+        <label for="area">Erityistoiveet:</label><br>
+        <textarea name="toiveet" id="area" cols="30" rows="10"></textarea><br>
+        <select name="valinta" id="valinta">
+            <option value="valinta1">Valinta1</option>
+            <option value="valinta2">Valinta2</option>
+            <option value="valinta3">Valinta3</option>
+        </select>
+
+        <br>
+        <input type="submit" value="Lähetä">
+        <input type="reset" value="Tyhjennä">
+
+
+    </form>
+
+
+
+    <!--    Tässä alkaa kuviin liittyvä matsku -->
+
+    <p>
+        <img src="images/cat_small.jpg" alt="Kuva kissasta"><br>
+        Kuva teksti tähän...
+    </p>
+    <p>
+        <a href="images/kitten.jpg" target="_blank">
+            <img src="images/kitten_small.jpg" alt="Kuva kissasta">
+        </a>
+    </p>
+
+
+
+
+
+</body>
+
+</html>

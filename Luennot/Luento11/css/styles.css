@@ -1,0 +1,131 @@
+.item {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    margin: 20px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item-1 {
+    transform: translate(15px, 15px);
+}
+
+.item-2 {
+    transform: translateX(15px, 15px);
+}
+
+.item-3 {
+    transform: translateY(-45px);
+}
+
+.item-4 {
+    transform: rotate(45deg);
+}
+
+.item-5 {
+    transform: rotateY(45deg);
+}
+
+.item-6 {
+    transform: skew(20deg, 20deg);
+}
+
+.item-7 {
+    transform: scale(0.75);
+}
+
+.item-8 {
+    transform: rotate(10deg) scale(1.25);
+}
+
+.item-9 {
+    background-color: red;
+    transition: backround-color 1.5s, height 2.5s 1.5s ease-in;
+}
+
+.item-9:hover {
+    background-color: bisque;
+    height: 200px;
+}
+
+.item-10 {
+    transform: rotate(0deg) scale(1);
+    transition: all 0.6s;
+}
+
+.item-10:hover {
+    transform: rotate(10deg) scale(1.25);
+}
+
+.container2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /* min-height: 380px; */
+}
+
+.imageContainer {
+    width: 250px;
+}
+
+.imageContainer h3 {
+    text-align: center;
+    padding: 25px 0;
+    border: 1px solid black;
+    margin: 0;
+}
+
+.img {
+    margin-top: 0;
+    height: 0;
+    background-size: cover;
+    transition: height 0.5s;
+}
+
+.imgML {
+    background-image: url(../images/monkey.jpg);
+}
+
+.imgMO {
+    background-image: url(../images/monkey.jpg);
+}
+
+.imgME {
+    background-image: url(../images/monkey.jpg)
+}
+
+h3:hover+.imgML,
+h3:hover+.imgMO,
+h3:hover+.imgME {
+    height: 250px;
+}
+
+.container3 {
+    height: 500px;
+    border: 1px solid black;
+}
+
+.ball {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border: 1px solid black;
+    border-radius: 50%;
+    animation: example 4s ease-in 0.5s infinite alternate;
+}
+
+@keyframes example {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(400px);
+    }
+}

@@ -1,0 +1,94 @@
+@import "partials/variables";
+@import "partials/mixins";
+
+* {
+    @include bs(content-box);
+}
+
+.demo {
+    color: $color7;
+}
+
+a {
+    color: $color7;
+
+    &:hover,
+    &:focus {
+        color: $color5
+    }
+
+    &:visited,
+    &:active {
+        color: $color4;
+    }
+}
+
+.main {
+    .content {
+        width: 70%;
+    }
+
+    .content & {
+        width: 100%;
+    }
+
+    .content & {
+        .level3 & {
+            width: 30%;
+        }
+    }
+}
+
+.main {
+    &.content {
+        color: $color3;
+    }
+}
+
+%box {
+    padding: 2em;
+    color: $color10;
+    background-color: $color11;
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+}
+
+.warning-box {
+    @extend %box;
+    border: 4px dotted $color1;
+}
+
+.success-box {
+    @extend %box;
+    border: 4px dotted $color4;
+}
+
+.info-box {
+    @extend %box;
+    border: 4px dotted $color7;
+}
+
+%box {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    margin: 5px;
+}
+
+// $primary-color: $color4;  kaikissa sama pääväri
+
+.div1 {
+    @extend %box;
+    background-color: $color4;
+}
+
+.div2 {
+    @extend %box;
+    background-color: lighten($color4, 15%);
+}
+
+.div3 {
+    @extend %box;
+    background-color: darken($color4, 25%);
+}
